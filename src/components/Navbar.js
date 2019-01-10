@@ -1,20 +1,27 @@
 import React from 'react'
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-default">
-            <div className="container">
-                <div className="navbar-header">
-                    <a className="navbar-brand" href="#">React</a>
-                </div>
+        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+            <Link className="navbar-brand" to='/'>Navbar</Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse " id="collapsibleNavbar">
                 <ul className="nav navbar-nav navbar-right">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/About'>About</Link></li>
-                    <li><Link to='/Contact'>Contact</Link></li>
+                    <li className="nav-item">
+                    <Link className="nav-link" to='/'>Home</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className="nav-link" to='/About'>About</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className="nav-link" to='/Contact'>Contact</Link>
+                    </li> 
                 </ul>
-            </div>
-        </nav>
+            </div> 
+      </nav>
     )
 }
 
